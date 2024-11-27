@@ -1,9 +1,12 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+import { Text } from '../../../components';
 
 export function LoginScreen() {
 	return (
 		<View>
-			<Text style={{ fontFamily: 'Poppins-Black' }}>Login</Text>
+			<Text color="error" preset="headingLarge">
+				Login Screen
+			</Text>
 		</View>
 	);
 }

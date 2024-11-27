@@ -1,10 +1,14 @@
 import { StyleSheet, View } from 'react-native';
 import { LoginScreen } from './src/screen';
+import { ThemeProvider } from '@shopify/restyle';
+import { theme } from './src/theme';
 
 export default function App() {
 	return (
 		<View style={styles.container}>
-			<LoginScreen />
+			<ThemeProvider theme={theme}>
+				<LoginScreen />
+			</ThemeProvider>
 		</View>
 	);
 }
