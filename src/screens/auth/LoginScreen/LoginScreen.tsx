@@ -8,7 +8,8 @@ import {
 	FormPasswordInput,
 	FormTextInput,
 	Screen,
-	Text
+	Text,
+	TouchableOpacityBox
 } from '@components';
 
 import { LoginSchema, loginSchema } from './loginSchema';
@@ -60,9 +61,15 @@ export function LoginScreen() {
 				Recuperar senha
 			</Text>
 			<Box mt="s32" flexDirection="row" justifyContent="center" gap="s40">
-				<Image source={require('../../../assets/image/linkeding.png')} />
-				<Image source={require('../../../assets/image/github.png')} />
-				<Image source={require('../../../assets/image/google.png')} />
+				<TouchableOpacityBox>
+					<Image source={require('../../../assets/image/linkeding.png')} />
+				</TouchableOpacityBox>
+				<TouchableOpacityBox>
+					<Image source={require('../../../assets/image/github.png')} />
+				</TouchableOpacityBox>
+				<TouchableOpacityBox>
+					<Image source={require('../../../assets/image/google.png')} />
+				</TouchableOpacityBox>
 			</Box>
 			<Button
 				// loading={isLoading}
