@@ -1,7 +1,7 @@
 import { StyleSheet, View } from 'react-native';
 import { LoginScreen } from './src/screen';
 import { ThemeProvider } from '@shopify/restyle';
-import { theme } from './src/theme';
+import { theme } from '@theme';
 
 export default function App() {
 	return (
