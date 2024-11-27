@@ -11,10 +11,10 @@ import { ArrowRightIcon } from '../../assets/icons/ArrowRightIcon';
 // import {ErrorRoundIcon} from '../../assets/icons/ErrorRoundIcon';
 import { EyeOffIcon } from '../../assets/icons/EyeOffIcon';
 import { EyeOnIcon } from '../../assets/icons/EyeOnIcon';
-// import {FileFill} from '../../assets/icons/FileFill';r
-// import {HomeFill} from '../../assets/icons/HomeFill';
+import { FileFill } from '../../assets/icons/FileFill';
+import { HomeFill } from '../../assets/icons/HomeFill';
 // import {PlusFill} from '../../assets/icons/PlusFill';
-// import {ProfileFill} from '../../assets/icons/ProfileFill';
+import { ProfileFill } from '../../assets/icons/ProfileFill';
 // import {SearchIcon} from '../../assets/icons/SearchIcon';
 // import {SettingsIcon} from '../../assets/icons/SettingsIcon';
 export interface IconBase {
@@ -55,11 +55,11 @@ const iconRegistry = {
 	// errorRound: ErrorRoundIcon,
 	// chevronRight: ChevronRightIcon,
 	eyeOn: EyeOnIcon,
-	eyeOff: EyeOffIcon
-	// fileFill: FileFill,
-	// homeFill: HomeFill,
+	eyeOff: EyeOffIcon,
+	fileFill: FileFill,
+	homeFill: HomeFill,
 	// plusFill: PlusFill,
-	// profileFill: ProfileFill,
+	profileFill: ProfileFill
 	// search: SearchIcon,
 	// settings: SettingsIcon,
 };

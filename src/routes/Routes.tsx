@@ -6,6 +6,7 @@ import { ActivityIndicator, Box } from '@components';
 
 import { AuthStack } from './AuthStack';
 import { OnboardingStack } from './OnboardingStack';
+import { AppStack } from './AppStack';
 
 function LoadingScreen() {
 	return (
@@ -23,9 +24,10 @@ function LoadingScreen() {
 const stacks = {
 	Loading: <LoadingScreen />,
 	Auth: <AuthStack />,
+	App: <AppStack />,
 	Onboarding: <OnboardingStack />
 };
 
 export function Router() {
-	return <NavigationContainer>{stacks.Onboarding}</NavigationContainer>;
+	return <NavigationContainer>{stacks.Auth}</NavigationContainer>;
 }
