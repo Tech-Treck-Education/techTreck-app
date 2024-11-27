@@ -3,8 +3,8 @@ import { ViewStyle } from 'react-native';
 import { createTheme } from '@shopify/restyle';
 
 export const palette = {
-	bluePrimary: '#00305E',
-	bluePrimaryLight: '#052A78',
+	bluePrimary: '#052A78',
+	bluePrimaryLight: '#00305E',
 	yellowSecondary: '#FFB319',
 	yellowSecondaryLight: '#FFB319',
 	blueTertiary: '#27B1BF',
@@ -40,7 +40,7 @@ export const theme = createTheme({
 		success: palette.greenSuccess,
 		successLight: palette.greenSuccessLight,
 
-		market: palette.carrotSecondary
+		market: palette.yellowSecondary
 	},
 
 	spacing: {

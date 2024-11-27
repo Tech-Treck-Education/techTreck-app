@@ -55,11 +55,9 @@ export function LoginScreen() {
 			<Text
 				onPress={navigateToForgotPasswordScreen}
 				color="primary"
-				preset="paragraphSmall"
-				bold
-				mt="s10"
+				preset="paragraphMedium"
 			>
-				Esqueceu a senha?
+				Recuperar senha
 			</Text>
 			<Box mt="s32" flexDirection="row" justifyContent="center" gap="s40">
 				<Image source={require('../../../assets/image/linkeding.png')} />
