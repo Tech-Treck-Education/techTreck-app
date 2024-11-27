@@ -1,5 +1,5 @@
+import { Button, Text } from '@components';
 import { View } from 'react-native';
-import { Text } from '../../../components';
 
 export function LoginScreen() {
 	return (
@@ -7,6 +7,7 @@ export function LoginScreen() {
 			<Text color="error" preset="headingLarge">
 				Login Screen
 			</Text>
+			<Button title="Login" />
 		</View>
 	);
 }
