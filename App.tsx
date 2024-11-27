@@ -1,15 +1,16 @@
 import { StyleSheet, View } from 'react-native';
-import { LoginScreen } from './src/screen';
 import { ThemeProvider } from '@shopify/restyle';
 import { theme } from '@theme';
+import { LoginScreen } from '@screens';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function App() {
 	return (
-		<View style={styles.container}>
+		<SafeAreaProvider>
 			<ThemeProvider theme={theme}>
 				<LoginScreen />
 			</ThemeProvider>
-		</View>
+		</SafeAreaProvider>
 	);
 }
 

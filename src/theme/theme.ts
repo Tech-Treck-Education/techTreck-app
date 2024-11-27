@@ -3,10 +3,12 @@ import { ViewStyle } from 'react-native';
 import { createTheme } from '@shopify/restyle';
 
 export const palette = {
-	bluePrimary: '#0058FB',
-	bluePrimaryLight: '#80ABFD',
-	carrotSecondary: '#F86F2D',
-	carrotSecondaryLight: '#FAE6DD',
+	bluePrimary: '#00305E',
+	bluePrimaryLight: '#052A78',
+	yellowSecondary: '#FFB319',
+	yellowSecondaryLight: '#FFB319',
+	blueTertiary: '#27B1BF',
+	blueTertiaryLight: '#27B1BF',
 	greenSuccess: '#4ABC86',
 	greenSuccessLight: '#D8FFEC',
 	redError: '#EA3838',
