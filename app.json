@@ -13,16 +13,45 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wtfinovacao.techTreckapp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.wtfinovacao.techTreckapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "src/assets/fonts/Poppins-Black.otf",
+            "src/assets/fonts/Poppins-BlackItalic.otf",
+            "src/assets/fonts/Poppins-Bold.otf",
+            "src/assets/fonts/Poppins-BoldItalic.otf",
+            "src/assets/fonts/Poppins-ExtraBold.otf",
+            "src/assets/fonts/Poppins-ExtraBoldItalic.otf",
+            "src/assets/fonts/Poppins-ExtraLight.otf",
+            "src/assets/fonts/Poppins-ExtraLightItalic.otf",
+            "src/assets/fonts/Poppins-Italic.otf",
+            "src/assets/fonts/Poppins-Light.otf",
+            "src/assets/fonts/Poppins-LightItalic.otf",
+            "src/assets/fonts/Poppins-Medium.otf",
+            "src/assets/fonts/Poppins-MediumItalic.otf",
+            "src/assets/fonts/Poppins-Regular.otf",
+            "src/assets/fonts/Poppins-SemiBold.otf",
+            "src/assets/fonts/Poppins-SemiBoldItalic.otf",
+            "src/assets/fonts/Poppins-Thin.otf",
+            "src/assets/fonts/Poppins-ThinItalic.otf"
+          ]
+        }
+      ]
+    ]
   }
 }
