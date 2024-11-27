@@ -4,7 +4,7 @@ import { createTheme } from '@shopify/restyle';
 
 export const palette = {
 	bluePrimary: '#052A78',
-	bluePrimaryLight: '#00305E',
+	bluePrimaryLight: '#007AFF',
 	yellowSecondary: '#FFB319',
 	yellowSecondaryLight: '#FFB319',
 	blueTertiary: '#27B1BF',

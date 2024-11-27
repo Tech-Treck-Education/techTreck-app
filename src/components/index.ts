@@ -8,3 +8,4 @@ export * from './Screen/Screen';
 export * from './Text/Text';
 export * from './TextInput/TextInput';
 export * from './Icon/Icon';
+export * from './ProgressIndicator/ProgressIndicator';

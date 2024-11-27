@@ -62,13 +62,13 @@ export function LoginScreen() {
 			</Text>
 			<Box mt="s32" flexDirection="row" justifyContent="center" gap="s40">
 				<TouchableOpacityBox>
-					<Image source={require('../../../assets/image/linkeding.png')} />
+					<Image source={require('../../../assets/images/linkeding.png')} />
 				</TouchableOpacityBox>
 				<TouchableOpacityBox>
-					<Image source={require('../../../assets/image/github.png')} />
+					<Image source={require('../../../assets/images/github.png')} />
 				</TouchableOpacityBox>
 				<TouchableOpacityBox>
-					<Image source={require('../../../assets/image/google.png')} />
+					<Image source={require('../../../assets/images/google.png')} />
 				</TouchableOpacityBox>
 			</Box>
 			<Button

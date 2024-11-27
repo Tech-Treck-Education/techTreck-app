@@ -5,6 +5,7 @@ import { useAppTheme } from '@hooks';
 import { ThemeColors } from '@theme';
 
 import { ArrowLeftIcon } from '../../assets/icons/ArrowLeftIcon';
+import { ArrowRightIcon } from '../../assets/icons/ArrowRightIcon';
 // import { CheckRoundIcon } from '../../assets/icons/CheckRoundIcon';
 // import {ChevronRightIcon} from '../../assets/icons/ChevronRightIcon';
 // import {ErrorRoundIcon} from '../../assets/icons/ErrorRoundIcon';
@@ -49,6 +50,7 @@ export function Icon({
 
 const iconRegistry = {
 	arrowLeft: ArrowLeftIcon,
+	arrowRight: ArrowRightIcon,
 	// checkRound: CheckRoundIcon,
 	// errorRound: ErrorRoundIcon,
 	// chevronRight: ChevronRightIcon,
