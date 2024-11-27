@@ -61,7 +61,11 @@ export function LoginScreen() {
 			>
 				Esqueceu a senha?
 			</Text>
-
+			<Box mt="s32" flexDirection="row" justifyContent="center" gap="s40">
+				<Image source={require('../../../assets/image/linkeding.png')} />
+				<Image source={require('../../../assets/image/github.png')} />
+				<Image source={require('../../../assets/image/google.png')} />
+			</Box>
 			<Button
 				// loading={isLoading}
 				disabled={!formState.isValid}
