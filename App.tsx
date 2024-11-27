@@ -3,12 +3,13 @@ import { ThemeProvider } from '@shopify/restyle';
 import { theme } from '@theme';
 import { LoginScreen, OnboardingScreen } from '@screens';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Router } from '@routes';
 
 export default function App() {
 	return (
 		<SafeAreaProvider>
 			<ThemeProvider theme={theme}>
-				<OnboardingScreen />
+				<Router />
 			</ThemeProvider>
 		</SafeAreaProvider>
 	);
