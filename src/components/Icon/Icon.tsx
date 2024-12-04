@@ -7,7 +7,7 @@ import { ThemeColors } from '@theme';
 import { ArrowLeftIcon } from '../../assets/icons/ArrowLeftIcon';
 import { ArrowRightIcon } from '../../assets/icons/ArrowRightIcon';
 // import { CheckRoundIcon } from '../../assets/icons/CheckRoundIcon';
-// import {ChevronRightIcon} from '../../assets/icons/ChevronRightIcon';
+import { ChevronRightIcon } from '../../assets/icons/ChevronRightIcon';
 // import {ErrorRoundIcon} from '../../assets/icons/ErrorRoundIcon';
 import { EyeOffIcon } from '../../assets/icons/EyeOffIcon';
 import { EyeOnIcon } from '../../assets/icons/EyeOnIcon';
@@ -16,7 +16,9 @@ import { HomeFill } from '../../assets/icons/HomeFill';
 // import {PlusFill} from '../../assets/icons/PlusFill';
 import { ProfileFill } from '../../assets/icons/ProfileFill';
 // import {SearchIcon} from '../../assets/icons/SearchIcon';
-// import {SettingsIcon} from '../../assets/icons/SettingsIcon';
+import { SettingsIcon } from '../../assets/icons/SettingsIcon';
+import { RankingIcon } from '../../assets/icons/RankingIcon';
+import { LogoIcon } from '../../assets/icons/LogoIcon';
 export interface IconBase {
 	size?: number;
 	color?: string;
@@ -53,15 +55,17 @@ const iconRegistry = {
 	arrowRight: ArrowRightIcon,
 	// checkRound: CheckRoundIcon,
 	// errorRound: ErrorRoundIcon,
-	// chevronRight: ChevronRightIcon,
+	chevronRight: ChevronRightIcon,
 	eyeOn: EyeOnIcon,
 	eyeOff: EyeOffIcon,
 	fileFill: FileFill,
 	homeFill: HomeFill,
 	// plusFill: PlusFill,
-	profileFill: ProfileFill
+	profileFill: ProfileFill,
 	// search: SearchIcon,
-	// settings: SettingsIcon,
+	settings: SettingsIcon,
+	ranking: RankingIcon,
+	logo: LogoIcon
 };
 
 type IconType = typeof iconRegistry;

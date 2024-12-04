@@ -9,3 +9,8 @@ export * from './Text/Text';
 export * from './TextInput/TextInput';
 export * from './Icon/Icon';
 export * from './ProgressIndicator/ProgressIndicator';
+export * from './RadioButton';
+export * from './Image/Image';
+export * from './Header/Header';
+export * from './Cards';
+export * from './TopThree/TopThree';

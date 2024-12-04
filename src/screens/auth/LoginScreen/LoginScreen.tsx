@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 
@@ -14,8 +14,12 @@ import {
 
 import { LoginSchema, loginSchema } from './loginSchema';
 import { Image } from 'react-native';
+import { AuthScreenProps } from '@routes';
+import { AuthContext } from 'src/context/Auth';
 
-export function LoginScreen() {
+export function LoginScreen({ navigation }: AuthScreenProps<'LoginScreen'>) {
+	const { login } = useContext(AuthContext);
+
 	const { control, formState, handleSubmit } = useForm<LoginSchema>({
 		resolver: zodResolver(loginSchema),
 		defaultValues: {
@@ -25,11 +29,17 @@ export function LoginScreen() {
 		mode: 'onChange'
 	});
 
-	function submitForm({ email, password }: LoginSchema) {}
+	function submitForm({ email, password }: LoginSchema) {
+		login();
+	}
 
-	function navigateToSignUpScreen() {}
+	function navigateToSignUpScreen() {
+		navigation.navigate('SignUpBasicDataScreen');
+	}
 
-	function navigateToForgotPasswordScreen() {}
+	function navigateToForgotPasswordScreen() {
+		navigation.navigate('ForgotPasswordScreen');
+	}
 
 	return (
 		<Screen scrollable>
@@ -60,7 +70,7 @@ export function LoginScreen() {
 			>
 				Recuperar senha
 			</Text>
-			<Box mt="s32" flexDirection="row" justifyContent="center" gap="s40">
+			{/* <Box mt="s32" flexDirection="row" justifyContent="center" gap="s40">
 				<TouchableOpacityBox>
 					<Image source={require('../../../assets/images/linkeding.png')} />
 				</TouchableOpacityBox>
@@ -70,7 +80,7 @@ export function LoginScreen() {
 				<TouchableOpacityBox>
 					<Image source={require('../../../assets/images/google.png')} />
 				</TouchableOpacityBox>
-			</Box>
+			</Box> */}
 			<Button
 				// loading={isLoading}
 				disabled={!formState.isValid}

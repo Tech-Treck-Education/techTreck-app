@@ -26,7 +26,7 @@ export const mapScreenToProps: Record<
 	RankingScreen: {
 		label: 'Ranking',
 		icon: {
-			focused: 'fileFill'
+			focused: 'ranking'
 		}
 	},
 	ProfileScreen: {

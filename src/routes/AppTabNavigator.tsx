@@ -5,7 +5,12 @@ import {
 	createBottomTabNavigator
 } from '@react-navigation/bottom-tabs';
 
-import { HomeScreen, ProjectScreen, RankingScreen } from '@screens';
+import {
+	HomeScreen,
+	ProfileScreen,
+	ProjectScreen,
+	RankingScreen
+} from '@screens';
 
 import { AppTabBar } from './AppTabBar';
 
@@ -34,7 +39,7 @@ export function AppTabNavigator() {
 			<Tab.Screen name="HomeScreen" component={HomeScreen} />
 			<Tab.Screen name="ProjectScreen" component={ProjectScreen} />
 			<Tab.Screen name="RankingScreen" component={RankingScreen} />
-			<Tab.Screen name="ProfileScreen" component={ProjectScreen} />
+			<Tab.Screen name="ProfileScreen" component={ProfileScreen} />
 		</Tab.Navigator>
 	);
 }

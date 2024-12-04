@@ -5,11 +5,12 @@ import { Text } from '../../Text/Text';
 import { Icon } from '../../Icon/Icon';
 
 import { ScreenProps } from '../Screen';
+import { useNavigation } from '@react-navigation/native';
 
 const ICON_SIZE = 20;
 type Props = Pick<ScreenProps, 'canGoBack' | 'title' | 'leftCanGoBack'>;
 export function ScreenHeader({ canGoBack, title, leftCanGoBack }: Props) {
-	// const navigation = useNavigation();
+	const navigation = useNavigation();
 	return (
 		<Box
 			flexDirection="row"
@@ -22,7 +23,7 @@ export function ScreenHeader({ canGoBack, title, leftCanGoBack }: Props) {
 				<TouchableOpacityBox
 					flexDirection="row"
 					alignItems="center"
-					// onPress={navigation.goBack}
+					onPress={navigation.goBack}
 				>
 					<Icon size={ICON_SIZE} name="arrowLeft" color="primary" />
 					{!title && (

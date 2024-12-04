@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { Box, Button, ProgressIndicator, Text } from '@components';
 
 import { OnboardingPageItem } from '../onboardingData';
+import { AuthContext } from 'src/context/Auth';
 
 type ContentProps = Omit<OnboardingPageItem, 'image'>;
 export function Content({
@@ -12,6 +13,8 @@ export function Content({
 	index,
 	isLast
 }: ContentProps) {
+	const { logout } = useContext(AuthContext);
+
 	return (
 		<Box>
 			<ProgressIndicator
@@ -41,6 +44,7 @@ export function Content({
 					title="Vamos começar"
 					backgroundColor="yellowSecondary"
 					mt="s56"
+					onPress={logout}
 				/>
 			)}
 		</Box>

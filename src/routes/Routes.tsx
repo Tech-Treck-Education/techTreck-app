@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -7,6 +7,7 @@ import { ActivityIndicator, Box } from '@components';
 import { AuthStack } from './AuthStack';
 import { OnboardingStack } from './OnboardingStack';
 import { AppStack } from './AppStack';
+import { AuthContext } from 'src/context/Auth';
 
 function LoadingScreen() {
 	return (
@@ -29,5 +30,7 @@ const stacks = {
 };
 
 export function Router() {
-	return <NavigationContainer>{stacks.Auth}</NavigationContainer>;
+	const { typeRoute } = useContext(AuthContext);
+
+	return <NavigationContainer>{stacks[typeRoute]}</NavigationContainer>;
 }

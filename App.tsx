@@ -4,14 +4,17 @@ import { theme } from '@theme';
 import { LoginScreen, OnboardingScreen } from '@screens';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Router } from '@routes';
+import { AuthProvider } from 'src/context/Auth';
 
 export default function App() {
 	return (
-		<SafeAreaProvider>
-			<ThemeProvider theme={theme}>
-				<Router />
-			</ThemeProvider>
-		</SafeAreaProvider>
+		<AuthProvider>
+			<SafeAreaProvider>
+				<ThemeProvider theme={theme}>
+					<Router />
+				</ThemeProvider>
+			</SafeAreaProvider>
+		</AuthProvider>
 	);
 }
 
