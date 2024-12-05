@@ -1,11 +1,22 @@
 import { Box, Button, Screen, Text } from '@components';
-import { AppScreenProps } from '@routes';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { useCallback, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { RefreshControl } from 'react-native';
 import { HeaderProfile } from './components/HeaderProfile';
+import { ProfileSchema, profileSchema } from './profileSchema';
+
 
 export function ProfileScreen() {
 	const [refreshing, setRefreshing] = useState(false);
+
+	const { control, formState, handleSubmit } = useForm<ProfileSchema>({
+		resolver: zodResolver(profileSchema),
+		defaultValues: {
+			email: 'John Doe',
+		},
+		mode: 'onChange'
+	});
 
 	const onRefresh = useCallback(() => {
 		setRefreshing(true);
@@ -26,22 +37,20 @@ export function ProfileScreen() {
 				John Doe
 			</Text>
 
-			<Box mt="s40">
-				<Text preset="headingSmall" mb="s10">
-					Sobre mim
-				</Text>
-				<Text preset="paragraphSmall" textAlign="justify">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-					malesuada, dolor id ultricies ultricies, nunc nunc ultricies
-					ultricies, nunc nunc ultricies ultricies, nunc nunc ultricies
-					ultricies, nunc nunc ultricies ultricies, nunc nunc ultricies
+			<Box mt="s32">
+				<Text preset="paragraphLarge" textAlign="center" color="bluePrimary">
+					Alterar Foto
 				</Text>
 			</Box>
+			<Box mt="s8">
+				
+			</Box>
+
 			<Button
-				title="Editar perfil"
-				preset="outline"
-				mt="s24"
-				onPress={navigateTo}
+				// loading={isLoading}
+				disabled={!formState.isValid}
+				mt="s48"
+				title="Entrar"
 			/>
 		</Screen>
 	);

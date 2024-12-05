@@ -13,6 +13,7 @@ export interface TextProps extends SRTextProps {
 	bold?: boolean;
 	italic?: boolean;
 	semiBold?: boolean;
+	color?: keyof Theme['colors'];
 }
 
 export function Text({
@@ -21,6 +22,7 @@ export function Text({
 	bold,
 	italic,
 	semiBold,
+	color = "grayBlack",
 	style,
 	...sRTextProps
 }: TextProps) {
@@ -28,7 +30,7 @@ export function Text({
 
 	return (
 		<SRText
-			color="backgroundContrast"
+			color={color}
 			style={[$fontSizes[preset], { fontFamily }, style]}
 			{...sRTextProps}
 		>
