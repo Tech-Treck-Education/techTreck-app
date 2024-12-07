@@ -16,3 +16,4 @@ export * from './auth/SignUp/SignUpBasicDataScreen/SignUpBasicDataScreen';
 export * from './auth/SignUp/SignUpChooseProgramminglevelScreen/SignUpChooseProgramminglevelScreen';
 export * from './auth/SignUp/SignUpChooseAreaProgrammingScreen/SignUpChooseAreaProgrammingScreen';
 export * from './auth/SignUp/SignUpChooseStudyTimeScreen/SignUpChooseStudyTimeScreen';
+export * from './auth/SignUp/SignUpPlanScreen/SignUpPlanScreen';

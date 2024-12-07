@@ -34,7 +34,9 @@ export function SignUpChooseStudyTimeScreen({
 		setSelectedItem(item);
 	}
 
-	function navigateTo() {}
+	function navigateToSignupPlanScreen() {
+		navigation.navigate('SignUpPlanScreen');
+	}
 
 	return (
 		<Screen canGoBack scrollable>
@@ -60,7 +62,7 @@ export function SignUpChooseStudyTimeScreen({
 				<Button
 					mt="s32"
 					// disabled={!formState.isValid}
-					onPress={navigateTo}
+					onPress={navigateToSignupPlanScreen}
 					title="Escolher"
 				/>
 			</Box>
