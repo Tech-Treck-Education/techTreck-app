@@ -5,6 +5,7 @@ export * from './app/HomeScreen/HomeScreen';
 export * from './app/ProjectScreen/ProjectScreen';
 export * from './app/RankingScreen/RankingScreen';
 export * from './app/ProfileScreen/ProfileScreen';
+export * from './app/EditProfileScreen/EditProfileScreen';
 export * from './app/SettingsScreen/SettingsScreen';
 export * from './app/TrailDetailsScreen/TrailDetailsScreen';
 

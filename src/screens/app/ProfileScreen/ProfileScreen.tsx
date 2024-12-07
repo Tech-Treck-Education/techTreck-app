@@ -1,28 +1,19 @@
 import { Box, Button, Screen, Text } from '@components';
-import { zodResolver } from '@hookform/resolvers/zod';
 import { useCallback, useState } from 'react';
-import { useForm } from 'react-hook-form';
 import { RefreshControl } from 'react-native';
 import { HeaderProfile } from './components/HeaderProfile';
-import { ProfileSchema, profileSchema } from './profileSchema';
+import { ProfileScreenProps } from '@routes';
 
-
-export function ProfileScreen() {
+export function ProfileScreen({ navigation }: ProfileScreenProps<'ProfileScreen'>) {
 	const [refreshing, setRefreshing] = useState(false);
-
-	const { control, formState, handleSubmit } = useForm<ProfileSchema>({
-		resolver: zodResolver(profileSchema),
-		defaultValues: {
-			email: 'John Doe',
-		},
-		mode: 'onChange'
-	});
 
 	const onRefresh = useCallback(() => {
 		setRefreshing(true);
 	}, []);
 
-	function navigateTo() {}
+	function navigateToEditProfileScreen() {
+		navigation.navigate("EditProfileScreen");
+	}
 
 	return (
 		<Screen
@@ -37,20 +28,22 @@ export function ProfileScreen() {
 				John Doe
 			</Text>
 
-			<Box mt="s32">
-				<Text preset="paragraphLarge" textAlign="center" color="bluePrimary">
-					Alterar Foto
+			<Box mt="s40">
+				<Text preset="headingSmall" mb="s10">
+					Sobre mim
+				</Text>
+				<Text preset="paragraphSmall" textAlign="justify">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+					malesuada, dolor id ultricies ultricies, nunc nunc ultricies
+					ultricies, nunc nunc ultricies ultricies, nunc nunc ultricies
+					ultricies, nunc nunc ultricies ultricies, nunc nunc ultricies
 				</Text>
 			</Box>
-			<Box mt="s8">
-				
-			</Box>
-
 			<Button
-				// loading={isLoading}
-				disabled={!formState.isValid}
-				mt="s48"
-				title="Entrar"
+				title="Editar perfil"
+				preset="outline"
+				mt="s24"
+				onPress={navigateToEditProfileScreen}
 			/>
 		</Screen>
 	);
