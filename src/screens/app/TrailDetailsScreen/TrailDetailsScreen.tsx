@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Screen, Text, TouchableOpacityBox } from '@components';
+import { Box, Icon, Screen, Text, TouchableOpacityBox } from '@components';
 import { FlatList, Image, ListRenderItemInfo } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Course, Trail } from '../HomeScreen/HomeScreen';
@@ -18,6 +18,7 @@ export function TrailDetailsScreen({
 	}
 
 	function renderItem({ item }: ListRenderItemInfo<Course>) {
+		console.log(item.title);
 		return (
 			<TouchableOpacityBox
 				flexDirection="row"
@@ -27,7 +28,18 @@ export function TrailDetailsScreen({
 				onPress={navigateToCurseDetailsScreen}
 			>
 				<Text>{item.title}</Text>
-				<Box width={30} height={30} bg="bluePrimary" />
+
+				{(item.title === 'Introdução' || item.title === 'Exercícios') && (
+					<Box
+						width={18}
+						height={18}
+						bg="bluePrimaryLight"
+						justifyContent="center"
+						alignItems="center"
+					>
+						<Icon name="check" color="grayWhite" size={12} />
+					</Box>
+				)}
 			</TouchableOpacityBox>
 		);
 	}

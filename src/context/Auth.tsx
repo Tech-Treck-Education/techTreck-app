@@ -81,6 +81,11 @@ function AuthProvider({ children }: AuthProviderProps) {
 			});
 		} catch (error) {
 			console.log('Login falhou.');
+			showToast({
+				message: 'Falha ao logar. Verifique os dados e tente novamente',
+				type: 'error',
+				position: 'top'
+			});
 		}
 	}
 

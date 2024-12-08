@@ -19,6 +19,7 @@ import { ProfileFill } from '../../assets/icons/ProfileFill';
 import { SettingsIcon } from '../../assets/icons/SettingsIcon';
 import { RankingIcon } from '../../assets/icons/RankingIcon';
 import { LogoIcon } from '../../assets/icons/LogoIcon';
+import { CheckIcon } from '../../assets/icons/CheckIcon';
 export interface IconBase {
 	size?: number;
 	color?: string;
@@ -65,7 +66,8 @@ const iconRegistry = {
 	// search: SearchIcon,
 	settings: SettingsIcon,
 	ranking: RankingIcon,
-	logo: LogoIcon
+	logo: LogoIcon,
+	check: CheckIcon
 };
 
 type IconType = typeof iconRegistry;

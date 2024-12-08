@@ -1,5 +1,6 @@
 import { Box, Button, RadioButtonSelector, Screen, Text } from '@components';
 import { AuthScreenProps } from '@routes';
+import { useToastService } from '@services';
 import { useState } from 'react';
 import { Image } from 'react-native';
 
@@ -26,6 +27,7 @@ const items: Option[] = [
 export function SignUpChooseStudyTimeScreen({
 	navigation
 }: AuthScreenProps<'SignUpChooseStudyTimeScreen'>) {
+	const { showToast } = useToastService();
 	const [selectedItem, setSelectedItem] = useState<Option | undefined>({
 		label: '10 minutos'
 	});
@@ -35,6 +37,11 @@ export function SignUpChooseStudyTimeScreen({
 	}
 
 	function navigateToSignupPlanScreen() {
+		showToast({
+			message: 'Conta criada com sucesso!',
+			type: 'success',
+			position: 'top'
+		});
 		navigation.navigate('SignUpPlanScreen');
 	}
 

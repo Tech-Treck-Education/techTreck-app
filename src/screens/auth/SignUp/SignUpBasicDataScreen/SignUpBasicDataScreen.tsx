@@ -45,7 +45,8 @@ export function SignUpBasicDataScreen({
 			});
 
 			showToast({
-				message: 'Conta criada com sucesso',
+				message:
+					'Conta criada com sucesso! Agora precisamos personalizar sua experiência',
 				type: 'success',
 				position: 'top'
 			});
@@ -53,6 +54,11 @@ export function SignUpBasicDataScreen({
 			navigation.navigate('SignUpChooseProgramminglevelScreen');
 		} catch (error) {
 			console.log(error);
+			showToast({
+				message: 'Erro ao criar conta. Verifique os dados e tente novamente',
+				type: 'error',
+				position: 'top'
+			});
 		} finally {
 			setIsLoading(false);
 		}
