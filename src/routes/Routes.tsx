@@ -32,5 +32,6 @@ const stacks = {
 export function Router() {
 	const { typeRoute } = useContext(AuthContext);
 
-	return <NavigationContainer>{stacks[typeRoute]}</NavigationContainer>;
+	// return <NavigationContainer>{stacks[typeRoute]}</NavigationContainer>;
+	return <NavigationContainer>{stacks['App']}</NavigationContainer>;
 }

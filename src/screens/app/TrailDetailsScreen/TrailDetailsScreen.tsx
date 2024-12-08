@@ -1,25 +1,34 @@
-import { Box, Screen, Text } from '@components';
+import React from 'react';
+import { Box, Screen, Text, TouchableOpacityBox } from '@components';
 import { FlatList, Image, ListRenderItemInfo } from 'react-native';
-import { images } from '../../../assets';
+import { useNavigation } from '@react-navigation/native';
 import { Course, Trail } from '../HomeScreen/HomeScreen';
+
 export function TrailDetailsScreen({
 	route
 }: {
 	route: { params: { trail: Trail } };
 }) {
+	const navigation = useNavigation();
+
 	const trail = route.params.trail;
+
+	function navigateToCurseDetailsScreen() {
+		navigation.navigate('CurseContentDetailsScreen', { trail: trail });
+	}
 
 	function renderItem({ item }: ListRenderItemInfo<Course>) {
 		return (
-			<Box
+			<TouchableOpacityBox
 				flexDirection="row"
 				justifyContent="space-between"
-				bg="gray4"
 				padding="s24"
+				backgroundColor="gray5"
+				onPress={navigateToCurseDetailsScreen}
 			>
 				<Text>{item.title}</Text>
 				<Box width={30} height={30} bg="bluePrimary" />
-			</Box>
+			</TouchableOpacityBox>
 		);
 	}
 	return (
@@ -32,7 +41,7 @@ export function TrailDetailsScreen({
 				showsVerticalScrollIndicator={false}
 				ListHeaderComponent={
 					<>
-						<Image source={images.javascript} />
+						<Image source={trail.img} />
 						<Text
 							preset="headingMedium"
 							color="bluePrimary"

@@ -8,6 +8,7 @@ export * from './app/ProfileScreen/ProfileScreen';
 export * from './app/EditProfileScreen/EditProfileScreen';
 export * from './app/SettingsScreen/SettingsScreen';
 export * from './app/TrailDetailsScreen/TrailDetailsScreen';
+export * from './app/CurseContentDetailsScreen/CurseContentDetailsScreen';
 
 export * from './auth/ForgotPassword/ForgotPasswordScreen/ForgotPasswordScreen';
 export * from './auth/ForgotPassword/ForgotPasswordFillCodeScreen/ForgotPasswordFillCodeScreen';
