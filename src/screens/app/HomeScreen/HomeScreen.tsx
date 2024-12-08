@@ -14,7 +14,7 @@ export interface Trail {
 	id: number;
 	title: string;
 	img: ImageSourcePropType;
-	course?: Course[];
+	course: Course[];
 }
 
 export interface Course {
@@ -49,31 +49,6 @@ const trail: Trail[] = [
 						id: 2,
 						question: 'What are the data types supported by JavaScript?',
 						answer: 'Number, String, Boolean, Object, Undefined, Null'
-					}
-				]
-			}
-		]
-	},
-	{
-		id: 2,
-		title: 'React',
-		img: images.react,
-		course: [
-			{
-				id: 1,
-				title: 'Introduction',
-				questions: [
-					{
-						id: 1,
-						question: 'What is React?',
-						answer:
-							'React is a front-end JavaScript library developed by Facebook in 2011.'
-					},
-					{
-						id: 2,
-						question: 'What are the features of React?',
-						answer:
-							'JSX, Components, One-way data flow, Virtual DOM, Simplicity'
 					}
 				]
 			}

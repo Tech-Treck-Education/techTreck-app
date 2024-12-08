@@ -3,7 +3,13 @@ import React from 'react';
 import { NavigatorScreenParams } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { SettingsScreen, Trail, TrailDetailsScreen } from '@screens';
+import {
+	SettingsScreen,
+	Trail,
+	TrailDetailsScreen,
+	Course,
+	CurseContentDetailsScreen
+} from '@screens';
 
 import { AppTabBottomTabParamList, AppTabNavigator } from './AppTabNavigator';
 
@@ -11,6 +17,9 @@ export type AppStackParamList = {
 	AppTabNavigator: NavigatorScreenParams<AppTabBottomTabParamList>;
 	SettingsScreen: undefined;
 	TrailDetailsScreen: {
+		trail: Trail;
+	};
+	CurseContentDetailsScreen: {
 		trail: Trail;
 	};
 };
@@ -32,6 +41,10 @@ export function AppStack({ initialRouteName = 'AppTabNavigator' }: Props) {
 			<Stack.Screen name="AppTabNavigator" component={AppTabNavigator} />
 			<Stack.Screen name="SettingsScreen" component={SettingsScreen} />
 			<Stack.Screen name="TrailDetailsScreen" component={TrailDetailsScreen} />
+			<Stack.Screen
+				name="CurseContentDetailsScreen"
+				component={CurseContentDetailsScreen}
+			/>
 		</Stack.Navigator>
 	);
 }
