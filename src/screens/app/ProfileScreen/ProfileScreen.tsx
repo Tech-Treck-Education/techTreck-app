@@ -1,17 +1,19 @@
 import { Box, Button, Screen, Text } from '@components';
-import { AppScreenProps } from '@routes';
 import { useCallback, useState } from 'react';
 import { RefreshControl } from 'react-native';
 import { HeaderProfile } from './components/HeaderProfile';
+import { ProfileScreenProps } from '@routes';
 
-export function ProfileScreen() {
+export function ProfileScreen({ navigation }: ProfileScreenProps<'ProfileScreen'>) {
 	const [refreshing, setRefreshing] = useState(false);
 
 	const onRefresh = useCallback(() => {
 		setRefreshing(true);
 	}, []);
 
-	function navigateTo() {}
+	function navigateToEditProfileScreen() {
+		navigation.navigate("EditProfileScreen");
+	}
 
 	return (
 		<Screen
@@ -41,7 +43,7 @@ export function ProfileScreen() {
 				title="Editar perfil"
 				preset="outline"
 				mt="s24"
-				onPress={navigateTo}
+				onPress={navigateToEditProfileScreen}
 			/>
 		</Screen>
 	);

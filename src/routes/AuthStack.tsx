@@ -7,7 +7,8 @@ import {
 	SignUpBasicDataScreen,
 	SignUpChooseAreaProgrammingScreen,
 	SignUpChooseProgramminglevelScreen,
-	SignUpChooseStudyTimeScreen
+	SignUpChooseStudyTimeScreen,
+	SignUpPlanScreen
 } from '@screens';
 
 export type AuthStackParamList = {
@@ -18,6 +19,7 @@ export type AuthStackParamList = {
 	SignUpChooseProgramminglevelScreen: undefined;
 	SignUpChooseAreaProgrammingScreen: undefined;
 	SignUpChooseStudyTimeScreen: undefined;
+	SignUpPlanScreen: undefined;
 };
 
 const Stack = createNativeStackNavigator<AuthStackParamList>();
@@ -55,6 +57,10 @@ export function AuthStack() {
 			<Stack.Screen
 				name="SignUpChooseStudyTimeScreen"
 				component={SignUpChooseStudyTimeScreen}
+			/>
+			<Stack.Screen
+				name="SignUpPlanScreen"
+				component={SignUpPlanScreen}
 			/>
 		</Stack.Navigator>
 	);

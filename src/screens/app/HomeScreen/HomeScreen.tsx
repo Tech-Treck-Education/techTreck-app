@@ -37,7 +37,7 @@ const trail: Trail[] = [
 		course: [
 			{
 				id: 1,
-				title: 'Introduction',
+				title: 'Introdução',
 				questions: [
 					{
 						id: 1,
@@ -50,7 +50,60 @@ const trail: Trail[] = [
 						question: 'What are the data types supported by JavaScript?',
 						answer: 'Number, String, Boolean, Object, Undefined, Null'
 					}
-				]
+				],
+				
+			},
+			{
+				id: 2,
+				title: 'Exercícios',
+				questions: [
+					{
+						id: 1,
+						question: 'Lorem ipsum dolor sit amet.',
+						answer:
+							'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+					},
+				],
+				
+			},
+			{
+				id: 3,
+				title: 'Testes condicionais',
+				questions: [
+					{
+						id: 1,
+						question: 'Lorem ipsum dolor sit amet.',
+						answer:
+							'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+					},
+				],
+				
+			},
+			{
+				id: 3,
+				title: 'Laços de Repetição',
+				questions: [
+					{
+						id: 1,
+						question: 'Lorem ipsum dolor sit amet.',
+						answer:
+							'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+					},
+				],
+				
+			},
+			{
+				id: 4,
+				title: 'Arrays',
+				questions: [
+					{
+						id: 1,
+						question: 'Lorem ipsum dolor sit amet.',
+						answer:
+							'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+					},
+				],
+				
 			}
 		]
 	}
