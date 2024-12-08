@@ -31,7 +31,6 @@ export function LoginScreen({ navigation }: AuthScreenProps<'LoginScreen'>) {
 
 	function submitForm({ email, password }: LoginSchema) {
 		login({ email, password });
-		// login({ email, password });
 	}
 
 	function navigateToSignUpScreen() {

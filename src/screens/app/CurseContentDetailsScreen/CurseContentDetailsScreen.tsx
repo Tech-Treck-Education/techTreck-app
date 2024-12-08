@@ -1,5 +1,6 @@
-import { Box, Button, Image, Screen, Text } from '@components';
+import { Box, Button, Screen, Text } from '@components';
 import { Course, Trail } from '../HomeScreen/HomeScreen';
+import { Image, Linking } from 'react-native';
 
 export function CurseContentDetailsScreen({
 	route
@@ -9,7 +10,7 @@ export function CurseContentDetailsScreen({
 	const trail = route.params.trail;
 	console.log(trail);
 	return (
-		<Screen canGoBack flex={1}>
+		<Screen canGoBack flex={1} scrollable>
 			<Image source={trail.img} />
 			<Text
 				preset="headingMedium"
@@ -40,10 +41,28 @@ export function CurseContentDetailsScreen({
 				direta ou representação literal é aquela em que o array é representado
 				pelos símbolos de colchetes, que podem ou não conter elementos.
 			</Text>
+			<Text color="bluePrimary" mt="s24">
+				{'\n\n'}
+				// Declaração direta (array vazio)
+				{'\n'}
+				let meuArray = [];
+				{'\n\n'}
+				// Declaração com elementos
+				{'\n'}
+				let frutas = ['Maçã', 'Banana', 'Laranja'];
+				{'\n\n'}
+				// Acessando elementos
+				{'\n'}
+				console.log(frutas[1]); // Saída: Banana
+				{'\n\n'}
+			</Text>
 			<Button
 				title="Agora tente você"
 				backgroundColor="blueTertiaryLight"
 				mt="s32"
+				onPress={() => {
+					Linking.openURL('https://playcode.io/javascript');
+				}}
 			/>
 		</Screen>
 	);
