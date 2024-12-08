@@ -14,3 +14,4 @@ export * from './Image/Image';
 export * from './Header/Header';
 export * from './Cards';
 export * from './TopThree/TopThree';
+export * from './Toast/Toast';

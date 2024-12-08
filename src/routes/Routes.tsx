@@ -8,6 +8,7 @@ import { AuthStack } from './AuthStack';
 import { OnboardingStack } from './OnboardingStack';
 import { AppStack } from './AppStack';
 import { AuthContext } from 'src/context/Auth';
+import { useRouter } from './useRouter';
 
 function LoadingScreen() {
 	return (
@@ -30,8 +31,8 @@ const stacks = {
 };
 
 export function Router() {
-	const { typeRoute } = useContext(AuthContext);
+	const stack = useRouter();
+	const Stack = stacks[stack];
 
-	// return <NavigationContainer>{stacks[typeRoute]}</NavigationContainer>;
-	return <NavigationContainer>{stacks['App']}</NavigationContainer>;
+	return <NavigationContainer>{Stack}</NavigationContainer>;
 }

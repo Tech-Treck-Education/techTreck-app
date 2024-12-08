@@ -9,7 +9,9 @@
 			"@routes": ["src/routes"],
 			"@screens": ["src/screens"],
 			"@theme": ["src/theme"],
-			"@assets": ["src/assets"]
+			"@assets": ["src/assets"],
+			"@services": ["src/services"],
+			"@context": ["src/context"]
 		}
 	}
 }

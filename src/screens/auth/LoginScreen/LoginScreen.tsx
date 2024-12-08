@@ -15,7 +15,7 @@ import {
 import { LoginSchema, loginSchema } from './loginSchema';
 import { Image } from 'react-native';
 import { AuthScreenProps } from '@routes';
-import { AuthContext } from 'src/context/Auth';
+import { AuthContext } from '@context';
 
 export function LoginScreen({ navigation }: AuthScreenProps<'LoginScreen'>) {
 	const { login } = useContext(AuthContext);
@@ -30,7 +30,8 @@ export function LoginScreen({ navigation }: AuthScreenProps<'LoginScreen'>) {
 	});
 
 	function submitForm({ email, password }: LoginSchema) {
-		login();
+		login({ email, password });
+		// login({ email, password });
 	}
 
 	function navigateToSignUpScreen() {

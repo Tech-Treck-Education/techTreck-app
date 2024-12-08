@@ -5,20 +5,17 @@ import { Box } from '@components';
 
 import { OnboardingPage } from './components/OnboardingPage';
 import { OnboardingPageItem, onboardingPages } from './onboardingData';
-import { AuthContext } from 'src/context/Auth';
+import { OnboardingContext } from '@context';
 
 export function OnboardingScreen() {
-	const { logout } = useContext(AuthContext);
-
+	const { hideOnboarding } = useContext(OnboardingContext);
 	const [pageIndex, setPageIndex] = useState(0);
 
 	const flatListRef = useRef<FlatList<OnboardingPageItem>>(null);
 
-	function finishOnboarding() {
-		logout();
-	}
 	function onPressNext() {
 		const isLastPage = pageIndex === onboardingPages.length - 1;
+
 		if (isLastPage) {
 		} else {
 			const nextIndex = pageIndex + 1;
@@ -32,7 +29,7 @@ export function OnboardingScreen() {
 			<OnboardingPage
 				pageItem={item}
 				onPressNext={onPressNext}
-				onPressSkip={finishOnboarding}
+				onPressSkip={hideOnboarding}
 			/>
 		);
 	}

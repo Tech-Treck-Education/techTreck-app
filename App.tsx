@@ -1,19 +1,23 @@
 import { StyleSheet, View } from 'react-native';
 import { ThemeProvider } from '@shopify/restyle';
 import { theme } from '@theme';
-import { LoginScreen, OnboardingScreen } from '@screens';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Router } from '@routes';
 import { AuthProvider } from 'src/context/Auth';
+import { Toast } from '@components';
+import { OnboardingProvider } from '@context';
 
 export default function App() {
 	return (
 		<AuthProvider>
-			<SafeAreaProvider>
-				<ThemeProvider theme={theme}>
-					<Router />
-				</ThemeProvider>
-			</SafeAreaProvider>
+			<OnboardingProvider>
+				<SafeAreaProvider>
+					<ThemeProvider theme={theme}>
+						<Router />
+						<Toast />
+					</ThemeProvider>
+				</SafeAreaProvider>
+			</OnboardingProvider>
 		</AuthProvider>
 	);
 }

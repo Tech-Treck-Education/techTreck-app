@@ -6,9 +6,9 @@ import { ThemeColors } from '@theme';
 
 import { ArrowLeftIcon } from '../../assets/icons/ArrowLeftIcon';
 import { ArrowRightIcon } from '../../assets/icons/ArrowRightIcon';
-// import { CheckRoundIcon } from '../../assets/icons/CheckRoundIcon';
+import { CheckRoundIcon } from '../../assets/icons/CheckRoundIcon';
 import { ChevronRightIcon } from '../../assets/icons/ChevronRightIcon';
-// import {ErrorRoundIcon} from '../../assets/icons/ErrorRoundIcon';
+import { ErrorRoundIcon } from '../../assets/icons/ErrorRoundIcon';
 import { EyeOffIcon } from '../../assets/icons/EyeOffIcon';
 import { EyeOnIcon } from '../../assets/icons/EyeOnIcon';
 import { FileFill } from '../../assets/icons/FileFill';
@@ -53,8 +53,8 @@ export function Icon({
 const iconRegistry = {
 	arrowLeft: ArrowLeftIcon,
 	arrowRight: ArrowRightIcon,
-	// checkRound: CheckRoundIcon,
-	// errorRound: ErrorRoundIcon,
+	checkRound: CheckRoundIcon,
+	errorRound: ErrorRoundIcon,
 	chevronRight: ChevronRightIcon,
 	eyeOn: EyeOnIcon,
 	eyeOff: EyeOffIcon,

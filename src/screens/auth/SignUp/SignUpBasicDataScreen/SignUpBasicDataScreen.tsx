@@ -14,10 +14,16 @@ import {
 } from '@components';
 import { Image } from 'react-native';
 import { AuthScreenProps } from '@routes';
+import api from 'src/services/api';
+import { useToastService } from '@services';
+import { useState } from 'react';
 
 export function SignUpBasicDataScreen({
 	navigation
 }: AuthScreenProps<'SignUpBasicDataScreen'>) {
+	const [isLoading, setIsLoading] = useState(false);
+
+	const { showToast } = useToastService();
 	const { control, formState, handleSubmit } = useForm<SignUpBasicDataSchema>({
 		resolver: zodResolver(signUpBasicDataSchema),
 		defaultValues: {
@@ -29,10 +35,27 @@ export function SignUpBasicDataScreen({
 		mode: 'onChange'
 	});
 
-	function submitForm(formValues: SignUpBasicDataSchema) {
-		// signUp(formValues);
-		console.log(formValues);
-		navigation.navigate('SignUpChooseProgramminglevelScreen');
+	async function createProfile(formValues: SignUpBasicDataSchema) {
+		try {
+			setIsLoading(true);
+			await api.post(`/users`, {
+				name: formValues.name,
+				email: formValues.email,
+				password: formValues.password
+			});
+
+			showToast({
+				message: 'Conta criada com sucesso',
+				type: 'success',
+				position: 'top'
+			});
+
+			navigation.navigate('SignUpChooseProgramminglevelScreen');
+		} catch (error) {
+			console.log(error);
+		} finally {
+			setIsLoading(false);
+		}
 	}
 
 	function navigateToLoginScreen() {
@@ -87,9 +110,9 @@ export function SignUpBasicDataScreen({
 				Já possui conta? Faça login
 			</Text>
 			<Button
-				// loading={isLoading}
-				// disabled={!formState.isValid}
-				onPress={handleSubmit(submitForm)}
+				loading={isLoading}
+				disabled={!formState.isValid}
+				onPress={handleSubmit(createProfile)}
 				title="Cadastrar"
 			/>
 		</Screen>

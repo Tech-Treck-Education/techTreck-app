@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { Box, Button, ProgressIndicator, Text } from '@components';
 
 import { OnboardingPageItem } from '../onboardingData';
-import { AuthContext } from 'src/context/Auth';
+import { OnboardingContext } from '@context';
 
 type ContentProps = Omit<OnboardingPageItem, 'image'>;
 export function Content({
@@ -13,7 +13,7 @@ export function Content({
 	index,
 	isLast
 }: ContentProps) {
-	const { logout } = useContext(AuthContext);
+	const { hideOnboarding } = useContext(OnboardingContext);
 
 	return (
 		<Box>
@@ -44,7 +44,7 @@ export function Content({
 					title="Vamos começar"
 					backgroundColor="yellowSecondary"
 					mt="s56"
-					onPress={logout}
+					onPress={hideOnboarding}
 				/>
 			)}
 		</Box>
