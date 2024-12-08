@@ -17,15 +17,17 @@ export type RootStackParamList = {
 };
 
 export interface User {
-	id: number;
-	nome: string;
+	id: string;
+	name: string;
 	email: string;
-	senha: string;
-	createAt: string;
-	updateAt: string;
+	password: string;
+	level: number;
+	score: number;
+	createdAt: string;
+	updatedAt: string;
 }
 
 export interface Credentials {
 	token: string;
-	// user: User;
+	user: User;
 }

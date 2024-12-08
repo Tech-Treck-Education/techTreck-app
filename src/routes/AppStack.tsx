@@ -9,7 +9,8 @@ import {
 	TrailDetailsScreen,
 	Course,
 	CurseContentDetailsScreen,
-	EditProfileScreen
+	EditProfileScreen,
+	ProjectDetailsScreen
 } from '@screens';
 
 import { AppTabBottomTabParamList, AppTabNavigator } from './AppTabNavigator';
@@ -24,6 +25,7 @@ export type AppStackParamList = {
 	CurseContentDetailsScreen: {
 		trail: Trail;
 	};
+	ProjectDetailsScreen: undefined;
 };
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -48,6 +50,10 @@ export function AppStack({ initialRouteName = 'AppTabNavigator' }: Props) {
 				component={CurseContentDetailsScreen}
 			/>
 			<Stack.Screen name="EditProfileScreen" component={EditProfileScreen} />
+			<Stack.Screen
+				name="ProjectDetailsScreen"
+				component={ProjectDetailsScreen}
+			/>
 		</Stack.Navigator>
 	);
 }

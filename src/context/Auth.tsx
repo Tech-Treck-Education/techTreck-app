@@ -16,15 +16,17 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType>({
 	credentials: {
-		token: ''
-		// user: {
-		// 	id: 0,
-		// 	nome: '',
-		// 	email: '',
-		// 	senha: '',
-		// 	createAt: '',
-		// 	updateAt: ''
-		// }
+		token: '',
+		user: {
+			id: '',
+			name: '',
+			email: '',
+			password: '',
+			level: 0,
+			score: 0,
+			createdAt: '',
+			updatedAt: ''
+		}
 	},
 	login: async () => {},
 	logout: () => {}
@@ -34,15 +36,17 @@ function AuthProvider({ children }: AuthProviderProps) {
 	const { showToast } = useToastService();
 
 	const [credentials, setCredentials] = useState<Credentials>({
-		token: ''
-		// user: {
-		// 	id: 0,
-		// 	nome: '',
-		// 	email: '',
-		// 	senha: '',
-		// 	createAt: '',
-		// 	updateAt: ''
-		// }
+		token: '',
+		user: {
+			id: '',
+			name: '',
+			email: '',
+			password: '',
+			level: 0,
+			score: 0,
+			createdAt: '',
+			updatedAt: ''
+		}
 	});
 
 	async function login({
@@ -59,15 +63,15 @@ function AuthProvider({ children }: AuthProviderProps) {
 			});
 
 			setCredentials({
-				token: response.data.token
-				// user: response.data.user
+				token: response.data.token,
+				user: response.data.user
 			});
 
 			await AsyncStorage.setItem(
 				AUTH_KEY,
 				JSON.stringify({
-					// email: response.data.user.email,
-					// senha: response.data.user.password,
+					email: response.data.user.email,
+					senha: response.data.user.password,
 					token: response.data.token
 				})
 			);
@@ -103,15 +107,17 @@ function AuthProvider({ children }: AuthProviderProps) {
 				setToken(token);
 
 				setCredentials({
-					token: token
-					// user: {
-					// 	id: 0,
-					// 	nome: '',
-					// 	email: email,
-					// 	senha: senha,
-					// 	createAt: '',
-					// 	updateAt: ''
-					// }
+					token: token,
+					user: {
+						id: '',
+						name: '',
+						email: '',
+						password: '',
+						level: 0,
+						score: 0,
+						createdAt: '',
+						updatedAt: ''
+					}
 				});
 			}
 		}
@@ -121,15 +127,17 @@ function AuthProvider({ children }: AuthProviderProps) {
 
 	function logout() {
 		setCredentials({
-			token: ''
-			// user: {
-			// 	id: 0,
-			// 	nome: '',
-			// 	email: '',
-			// 	senha: '',
-			// 	createAt: '',
-			// 	updateAt: ''
-			// }
+			token: '',
+			user: {
+				id: '',
+				name: '',
+				email: '',
+				password: '',
+				level: 0,
+				score: 0,
+				createdAt: '',
+				updatedAt: ''
+			}
 		});
 		AsyncStorage.removeItem(AUTH_KEY);
 		api.defaults.headers.common.Authorization = null;

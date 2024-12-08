@@ -9,6 +9,7 @@ export const images = {
 	onboardingCapi3: require('./images/onboarding/onboarding-capi-3.png'),
 	onboardingCapi4: require('./images/onboarding/onboarding-capi-4.png'),
 	onboardingCapi5: require('./images/onboarding/onboarding-capi-5.png'),
+	onboardingCapi6: require('./images/onboarding/onboarding-capi-6.png'),
 
 	// Plan
 
@@ -16,6 +17,5 @@ export const images = {
 	planLang2: require('./images/plan/css.png'),
 	planLang3: require('./images/plan/javascript.png'),
 	planLang4: require('./images/plan/react.png'),
-	planLang5: require('./images/plan/angular.png'),
-	
+	planLang5: require('./images/plan/angular.png')
 };

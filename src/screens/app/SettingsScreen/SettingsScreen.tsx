@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { FlatList, ListRenderItemInfo } from 'react-native';
+import { FlatList, Image, ListRenderItemInfo } from 'react-native';
 
-import { Button, Screen } from '@components';
+import { Box, Button, Screen } from '@components';
 import { AppScreenProps } from '@routes';
 
 import { MenuItem, MenuItemProps } from './components/MenuItem';
@@ -33,7 +33,14 @@ export function SettingsScreen({
 				bounces={false}
 				renderItem={renderItem}
 				ListFooterComponent={
-					<Button mt="s48" title="Sair da conta" onPress={logout} />
+					<>
+						<Button mt="s48" title="Sair da conta" onPress={logout} />
+						<Box alignItems="center" mb="s40" mt="s32">
+							<Image
+								source={require('../../../assets/images/onboarding/onboarding-capi-6.png')}
+							/>
+						</Box>
+					</>
 				}
 			/>
 		</Screen>

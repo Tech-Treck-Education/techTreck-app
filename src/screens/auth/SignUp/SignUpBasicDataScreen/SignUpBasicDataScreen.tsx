@@ -1,5 +1,8 @@
+import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
+import { Image } from 'react-native';
+import { AuthScreenProps } from '@routes';
 import {
 	SignUpBasicDataSchema,
 	signUpBasicDataSchema
@@ -12,11 +15,8 @@ import {
 	Screen,
 	Text
 } from '@components';
-import { Image } from 'react-native';
-import { AuthScreenProps } from '@routes';
 import api from 'src/services/api';
 import { useToastService } from '@services';
-import { useState } from 'react';
 
 export function SignUpBasicDataScreen({
 	navigation
@@ -29,6 +29,7 @@ export function SignUpBasicDataScreen({
 		defaultValues: {
 			name: '',
 			email: '',
+			linkImg: '',
 			password: '',
 			passwordConfirmation: ''
 		},
@@ -88,6 +89,14 @@ export function SignUpBasicDataScreen({
 				name="email"
 				label="E-mail"
 				placeholder="Digite o seu e-mail"
+				boxProps={{ mb: 's20' }}
+			/>
+
+			<FormTextInput
+				control={control}
+				name="linkImg"
+				label="Link de uma imagem sua"
+				placeholder="Cole aqui o link da sua imagem"
 				boxProps={{ mb: 's20' }}
 			/>
 

@@ -4,13 +4,16 @@ import { Text } from 'src/components/Text/Text';
 
 export function CardProject({
 	title,
-	color
+	color,
+	onPress
 }: {
 	title: string;
 	color: ThemeColors;
+	onPress: () => void;
 }) {
 	return (
 		<PressableBox
+			onPress={onPress}
 			// width={'100%'}
 			height={150}
 			backgroundColor={color}

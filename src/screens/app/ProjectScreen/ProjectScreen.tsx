@@ -7,6 +7,7 @@ import {
 
 import { CardProject, Header, Screen, Text } from '@components';
 import { ThemeColors } from '@theme';
+import { AppTabScreenProps } from '@routes';
 
 interface Project {
 	id: number;
@@ -35,9 +36,20 @@ const projects: Project[] = [
 		color: 'bluePrimaryLight'
 	}
 ];
-export function ProjectScreen() {
+export function ProjectScreen({
+	navigation
+}: AppTabScreenProps<'ProfileScreen'>) {
+	function navigateToEditProfileScreen() {
+		navigation.navigate('ProjectDetailsScreen');
+	}
 	function renderItem({ item }: ListRenderItemInfo<Project>) {
-		return <CardProject title={item.title} color={item.color} />;
+		return (
+			<CardProject
+				title={item.title}
+				color={item.color}
+				onPress={navigateToEditProfileScreen}
+			/>
+		);
 	}
 
 	return (

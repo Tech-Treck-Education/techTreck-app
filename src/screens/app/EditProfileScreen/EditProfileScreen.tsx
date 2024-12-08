@@ -13,7 +13,7 @@ interface UserProfile {
 
 const initialState: UserProfile = {
 	name: 'John Doe',
-	email: 'johndoe@example.com',
+	email: 'johndoe@email.com',
 	bio: 'Lorem ipsum...'
 };
 
@@ -55,6 +55,8 @@ export function EditProfileScreen() {
 				placeholder="Escreva sua bio"
 				multiline
 				boxProps={{ mb: 's60' }}
+				numberOfLines={10}
+				style={{ height: 200 }}
 			/>
 
 			<Button title="Salvar" onPress={handleSubmit(handleSave)} />
