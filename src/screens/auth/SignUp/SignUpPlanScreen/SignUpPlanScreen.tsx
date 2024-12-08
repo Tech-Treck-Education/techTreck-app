@@ -7,7 +7,6 @@ import { Image } from 'react-native';
 import { images } from '@assets';
 
 import { AuthScreenProps } from '@routes';
-import { AppTabNavigator } from '@routes';
 
 export function SignUpPlanScreen({
 	navigation
@@ -83,8 +82,9 @@ export function SignUpPlanScreen({
                 
                 <Button
                     mt="s40"
-                    title="Ir para a trilha"
-                    onPress={() => navigation.navigate('HomeScreen')}
+                    title="Ir para login"
+                    onPress={() => navigation.navigate('LoginScreen')}
+                    paddingHorizontal='s60'
                 />
 			</Box>
 			
