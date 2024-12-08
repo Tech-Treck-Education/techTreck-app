@@ -37,7 +37,7 @@ export function TrailDetailsScreen({
 				data={trail.course}
 				contentContainerStyle={{ gap: 24 }}
 				renderItem={renderItem}
-				keyExtractor={(item) => item.toString()}
+				keyExtractor={(item) => item.id.toString()}
 				showsVerticalScrollIndicator={false}
 				ListHeaderComponent={
 					<>

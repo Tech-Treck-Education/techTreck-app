@@ -50,8 +50,7 @@ const trail: Trail[] = [
 						question: 'What are the data types supported by JavaScript?',
 						answer: 'Number, String, Boolean, Object, Undefined, Null'
 					}
-				],
-				
+				]
 			},
 			{
 				id: 2,
@@ -62,9 +61,8 @@ const trail: Trail[] = [
 						question: 'Lorem ipsum dolor sit amet.',
 						answer:
 							'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-					},
-				],
-				
+					}
+				]
 			},
 			{
 				id: 3,
@@ -75,12 +73,11 @@ const trail: Trail[] = [
 						question: 'Lorem ipsum dolor sit amet.',
 						answer:
 							'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-					},
-				],
-				
+					}
+				]
 			},
 			{
-				id: 3,
+				id: 4,
 				title: 'Laços de Repetição',
 				questions: [
 					{
@@ -88,12 +85,11 @@ const trail: Trail[] = [
 						question: 'Lorem ipsum dolor sit amet.',
 						answer:
 							'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-					},
-				],
-				
+					}
+				]
 			},
 			{
-				id: 4,
+				id: 5,
 				title: 'Arrays',
 				questions: [
 					{
@@ -101,9 +97,8 @@ const trail: Trail[] = [
 						question: 'Lorem ipsum dolor sit amet.',
 						answer:
 							'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-					},
-				],
-				
+					}
+				]
 			}
 		]
 	}

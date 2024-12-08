@@ -8,7 +8,8 @@ import {
 	Trail,
 	TrailDetailsScreen,
 	Course,
-	CurseContentDetailsScreen
+	CurseContentDetailsScreen,
+	EditProfileScreen
 } from '@screens';
 
 import { AppTabBottomTabParamList, AppTabNavigator } from './AppTabNavigator';
@@ -16,6 +17,7 @@ import { AppTabBottomTabParamList, AppTabNavigator } from './AppTabNavigator';
 export type AppStackParamList = {
 	AppTabNavigator: NavigatorScreenParams<AppTabBottomTabParamList>;
 	SettingsScreen: undefined;
+	EditProfileScreen: undefined;
 	TrailDetailsScreen: {
 		trail: Trail;
 	};
@@ -45,6 +47,7 @@ export function AppStack({ initialRouteName = 'AppTabNavigator' }: Props) {
 				name="CurseContentDetailsScreen"
 				component={CurseContentDetailsScreen}
 			/>
+			<Stack.Screen name="EditProfileScreen" component={EditProfileScreen} />
 		</Stack.Navigator>
 	);
 }
